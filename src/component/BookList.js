@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { themeContext } from '../context/ThemeContext';
+import AuthContextProvider from './AuthContext';
 class BookList extends Component {
     state = {  }
     render() {        
        return(
+           <AuthContextProvider.Consumer>{(authContext) =>{}}
         <themeContext.Consumer>
-            {(context)=>{
-                console.log(context);
-                const {isLightTheme,light,dark}  = context;
+            {(themeContext)=>{
+                console.log(themeContext);
+                const {isLightTheme,light,dark}  = themeContext;
                 const theme = isLightTheme ? light :dark;
         return ( 
                 <div className="book-list" style={{color:theme.syntax,background:theme.bg}}>
@@ -21,7 +23,8 @@ class BookList extends Component {
             </ul>
                 </div>)
             }}
-       </themeContext.Consumer>);
+       </themeContext.Consumer>
+       </AuthContextProvider.Consumer>);
     }
 }
  
