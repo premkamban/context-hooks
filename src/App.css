@@ -1,34 +1,37 @@
 .App {
   max-width: 400px;
-  margin:30px auto;
+  margin: 30px auto;
   text-align: center;
 }
 
-nav{
+nav {
   padding: 5px;
 }
-nav ul{
-  padding:0px;
+nav ul {
+  padding: 0px;
 }
 
 nav ul li {
   display: inline-block;
-  margin:0 10px;
+  margin: 0 10px;
 }
 .App-link {
   color: #61dafb;
 }
 
-.book-list{
-  padding:20px;
-  margin-bottom:20px;
+.book-list,
+.song-list {
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.book-list ul {
+.book-list ul,
+.song-list ul {
   padding: 0px;
-  list-style-type:none;
+  list-style-type: none;
 }
-.book-list li {
+.book-list li,
+.song-list li {
   padding: 10px;
   margin: 10px auto;
   border-radius: 10px;
