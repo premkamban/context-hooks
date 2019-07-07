@@ -7,6 +7,7 @@ import ThemeToggler from "./component/ThemeToggler";
 import AuthContextProvider from "./component/AuthContext";
 import SongList from "./component/songList";
 import BookContextProvider from "./context/bookContext";
+import SongContextProvider from "./context/SongContext";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
           <BookContextProvider>
             <BookList />
           </BookContextProvider>
-          <SongList />
+          <SongContextProvider>
+            <SongList />
+          </SongContextProvider>
           <ThemeToggler />
         </AuthContextProvider>
       </ThemeContextProvider>
