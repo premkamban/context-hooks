@@ -3,7 +3,7 @@ const NewSongList = ({ addSongs }) => {
   const [title, setTitle] = useState("");
   const handleSubmit = e => {
     e.preventDefault();
-    addSongs(title);
+    addSongs({ type: "ADD_SONG", song: { title } });
     setTitle("");
   };
   return (

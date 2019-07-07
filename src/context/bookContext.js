@@ -1,19 +1,13 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useReducer } from "react";
+import bookReducer from "../Reducers/BookReducer.js";
 
 export const BookContext = createContext();
 
 const BookContextProvider = props => {
-  const [books, setSongs] = useState([
-    { id: 1, title: "The Habit" },
-    { id: 2, title: "The lord of rings" },
-    { id: 3, title: "The Da vinci code" },
-    { id: 4, title: "Sherlock homes" },
-    { id: 5, title: "Hooked" },
-    { id: 6, title: "The power of positive thinking" }
-  ]);
+  const [books, dispatch] = useReducer(bookReducer, []);
 
   return (
-    <BookContext.Provider value={{ books }}>
+    <BookContext.Provider value={{ books, dispatch }}>
       {props.children}
     </BookContext.Provider>
   );

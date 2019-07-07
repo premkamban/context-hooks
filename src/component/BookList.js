@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { themeContext } from "../context/ThemeContext";
 import { BookContext } from "../context/bookContext";
+import NewSongList from "./NewSongList";
 
 const BookList = () => {
   const { isLightTheme, light, dark } = useContext(themeContext);
-  const { books } = useContext(BookContext);
+  const { books, dispatch } = useContext(BookContext);
   const theme = isLightTheme ? light : dark;
   console.log(books);
   return (
@@ -21,6 +22,7 @@ const BookList = () => {
           );
         })}
       </ul>
+      <NewSongList addSongs={dispatch} />
     </div>
   );
 };
