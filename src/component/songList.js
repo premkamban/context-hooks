@@ -1,18 +1,21 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import NewSongList from "./NewSongList";
-import SongContext from "./context/SongContext.js";
+import SongContext from "../context/SongContext";
+
 
 const SongList = () => {
   const [songs, dispatch] = useContext(SongContext);
 
   useEffect(() => {
     console.log("use effect hook ran", songs);
-  });
+  }, [songs]);
 
   return (
     <div className="song-list">
       <ul>
-        {songs.length == "" ? (
+        {console.log("song list" + songs)}
+        {songs.length === "" ? (
+
           songs.map(song => {
             return (
               <li key={song.id}>
@@ -26,8 +29,8 @@ const SongList = () => {
             );
           })
         ) : (
-          <div>no records</div>
-        )}
+            <div>no records</div>
+          )}
       </ul>
       <NewSongList addSongs={dispatch} />
     </div>

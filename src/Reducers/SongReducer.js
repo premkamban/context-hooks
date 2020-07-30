@@ -1,4 +1,4 @@
-import uuid from "uuid/v1";
+
 
 const SongReducer = (state, action) => {
   switch (action.type) {
@@ -7,7 +7,7 @@ const SongReducer = (state, action) => {
         ...state,
         {
           title: action.song.title,
-          id: uuid()
+          id: state.size + 1
         }
       ];
     case "REMOVE_SONG":

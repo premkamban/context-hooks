@@ -8,7 +8,7 @@ const BookList = () => {
   const { books, dispatch } = useContext(BookContext);
   const theme = isLightTheme ? light : dark;
   console.log(books);
-  return (
+  return books.length ? (
     <div
       className="book-list"
       style={{ color: theme.syntax, background: theme.bg }}
@@ -24,7 +24,12 @@ const BookList = () => {
       </ul>
       <NewSongList addSongs={dispatch} />
     </div>
-  );
+  ) :
+    (<React.Fragment>
+      <div>No Books</div>
+      <NewSongList addSongs={dispatch} />
+    </React.Fragment>
+    )
 };
 
 export default BookList;

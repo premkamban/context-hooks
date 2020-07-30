@@ -1,4 +1,4 @@
-import uuid from "uuid/v1";
+
 
 const bookReducer = (state, action) => {
   switch (action.type) {
@@ -7,7 +7,7 @@ const bookReducer = (state, action) => {
         ...state,
         {
           title: action.book.title,
-          id: uuid()
+          id: state.size + 1
         }
       ];
     case "Remove_BOOK":
