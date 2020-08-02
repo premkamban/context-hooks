@@ -1,0 +1,98 @@
+useEffect(() => {
+
+});
+
+useEffect(() => {
+    
+},[]); componentDIDMount 
+
+useEffect(() => {
+    
+},[state.value]);
+
+React.memo()
+
+obj = {
+    id:1,
+    name,
+    children : [
+        {
+    id:2,
+    name,
+    children : [
+        {
+    id:3,
+    name,
+    children : [
+        
+    ]
+}
+    ]
+}
+    ]
+}
+func get (value) {  
+    for v in Object.keys(value) {
+    if( v  == "children" ) {
+       value[v].map((data) => {
+           console.log(data.id);
+       });  
+       value[v].length > 1 && get(value[v]);
+    }
+    
+    }
+}
+
+<RadioList name="">
+<input type = "radio"/>
+ <input type = "radio"/>
+<input type = "radio"/>
+<input type = "radio"/>
+<input type = "radio"/>
+</radioList>
+
+get
+post
+delete
+put
+
+fetch("",
+{
+    header { 
+    allow-cross-origin: "xxx"
+}})
+
+//CSS
+
+@media (max-width: 500px) {
+  p {
+    text-align: centre;
+    }
+} 
+
+@media (max-width: 700px) {
+  p {
+    text-align: justify;
+    }
+} 
+
+
+e.preventDefault();
+
+
+(e) => {
+    e.stopPropagation();
+    return 1;
+}
+(e) => {
+    e.stopPropagation();
+    return 1
+}
+
+<div onclick1()>
+<div onclick2()>
+</div>
+</div>
+
+
+
